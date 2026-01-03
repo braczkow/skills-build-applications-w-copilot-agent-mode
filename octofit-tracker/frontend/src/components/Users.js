@@ -9,10 +9,9 @@ function Users() {
     const fetchUsers = async () => {
       try {
         const codespace = process.env.REACT_APP_CODESPACE_NAME;
-        const baseUrl = codespace 
-          ? `https://${codespace}-8000.app.github.dev`
-          : 'http://localhost:8000';
-        const apiUrl = `${baseUrl}/api/users/`;
+        const apiUrl = codespace 
+          ? `https://${codespace}-8000.app.github.dev/api/users/`
+          : 'http://localhost:8000/api/users/';
         
         console.log('Users - Fetching from:', apiUrl);
         
